@@ -1,0 +1,7 @@
+KLEE: WARNING: undefined reference to function: puts
+KLEE: WARNING: undefined reference to function: strcat
+KLEE: WARNING: undefined reference to function: strcmp
+KLEE: WARNING: undefined reference to function: strcpy
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING ONCE: calling external: strcat(29308272, 29106816)
+KLEE: WARNING ONCE: calling external: strcmp(29107648, 29308272)
