@@ -1,0 +1,331 @@
+# Query 0 -- Type: InitialValues, Instructions: 5283
+(query [] false)
+#   OK -- Elapsed: 2.993500e-02
+#   Solvable: true
+
+# Query 1 -- Type: InitialValues, Instructions: 5283
+array hay1[3] : w32 -> w8 = symbolic
+(query [] (Eq 0 (Read w8 0 hay1)) []
+        [hay1])
+#   OK -- Elapsed: 4.550993e-03
+#   Solvable: true
+#     hay1 = [1,0,0]
+
+# Query 2 -- Type: InitialValues, Instructions: 5301
+array hay1[3] : w32 -> w8 = symbolic
+(query [] (Eq 0 (Read w8 1 hay1)) []
+        [hay1])
+#   OK -- Elapsed: 3.741980e-03
+#   Solvable: true
+#     hay1 = [0,1,0]
+
+# Query 3 -- Type: InitialValues, Instructions: 5323
+array hay2[3] : w32 -> w8 = symbolic
+(query [] (Eq 0 (Read w8 0 hay2)) []
+        [hay2])
+#   OK -- Elapsed: 1.769960e-03
+#   Solvable: true
+#     hay2 = [1,0,0]
+
+# Query 4 -- Type: InitialValues, Instructions: 5350
+array hay1[3] : w32 -> w8 = symbolic
+(query [] (Eq 0 (Read w8 2 hay1)) []
+        [hay1])
+#   OK -- Elapsed: 2.906978e-03
+#   Solvable: true
+#     hay1 = [0,0,1]
+
+# Query 5 -- Type: InitialValues, Instructions: 5365
+array hay2[3] : w32 -> w8 = symbolic
+(query [] (Eq 0 (Read w8 1 hay2)) []
+        [hay2])
+#   OK -- Elapsed: 3.587008e-03
+#   Solvable: true
+#     hay2 = [0,1,0]
+
+# Query 6 -- Type: InitialValues, Instructions: 5376
+array hay1[3] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0 (Read w8 0 hay1)))
+         (Eq false
+             (Eq 0 (Read w8 1 hay1)))
+         (Eq false
+             (Eq 0 (Read w8 2 hay1)))]
+        false []
+        [hay1])
+#   OK -- Elapsed: 3.950000e-03
+#   Solvable: true
+#     hay1 = [1,1,1]
+
+# Query 7 -- Type: InitialValues, Instructions: 5444
+array hay2[3] : w32 -> w8 = symbolic
+(query [] (Eq 0 (Read w8 2 hay2)) []
+        [hay2])
+#   OK -- Elapsed: 1.358986e-03
+#   Solvable: true
+#     hay2 = [0,0,1]
+
+# Query 8 -- Type: InitialValues, Instructions: 5458
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 0 hay1))
+         (Eq false
+             (Eq 0 (Read w8 0 hay2)))
+         (Eq false
+             (Eq 0 (Read w8 1 hay2)))
+         (Eq false
+             (Eq 0 (Read w8 2 hay2)))]
+        false []
+        [hay2
+         hay1])
+#   OK -- Elapsed: 3.596008e-03
+#   Solvable: true
+#     hay2 = [1,1,1]
+#     hay1 = [0,0,0]
+
+# Query 9 -- Type: InitialValues, Instructions: 5503
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0 (Read w8 0 hay1)))
+         (Eq false
+             (Eq 0 (Read w8 1 hay1)))
+         (Eq 0 (Read w8 2 hay1))
+         (Eq false
+             (Eq 0 (Read w8 0 hay2)))]
+        false []
+        [hay1
+         hay2])
+#   OK -- Elapsed: 5.732000e-03
+#   Solvable: true
+#     hay1 = [1,1,0]
+#     hay2 = [1,0,0]
+
+# Query 10 -- Type: InitialValues, Instructions: 5633
+array hay1[3] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0 N0:(Read w8 0 hay1)))]
+        (Eq false (Eq 99 N0)) []
+        [hay1])
+#   OK -- Elapsed: 8.337975e-03
+#   Solvable: true
+#     hay1 = [99,0,0]
+
+# Query 11 -- Type: InitialValues, Instructions: 5654
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0 N0:(Read w8 0 hay2)))]
+        (Eq false (Eq 99 N0)) []
+        [hay2])
+#   OK -- Elapsed: 2.007961e-03
+#   Solvable: true
+#     hay2 = [99,0,0]
+
+# Query 12 -- Type: InitialValues, Instructions: 5868
+array hay1[3] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0 N0:(Read w8 1 hay1)))]
+        (Eq false (Eq 97 N0)) []
+        [hay1])
+#   OK -- Elapsed: 1.864016e-03
+#   Solvable: true
+#     hay1 = [0,97,0]
+
+# Query 13 -- Type: InitialValues, Instructions: 6045
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0 N0:(Read w8 1 hay2)))]
+        (Eq false (Eq 97 N0)) []
+        [hay2])
+#   OK -- Elapsed: 5.302012e-03
+#   Solvable: true
+#     hay2 = [0,97,0]
+
+# Query 14 -- Type: InitialValues, Instructions: 6190
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0 N0:(Read w8 0 hay2)))]
+        (Eq false (Eq 97 N0)) []
+        [hay2])
+#   OK -- Elapsed: 1.332998e-03
+#   Solvable: true
+#     hay2 = [97,0,0]
+
+# Query 15 -- Type: InitialValues, Instructions: 6594
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0 N0:(Read w8 0 hay1)))
+         (Eq false
+             (Eq 0 (Read w8 1 hay1)))
+         (Eq 0 (Read w8 2 hay1))
+         (Eq 0 (Read w8 0 hay2))
+         (Eq false (Eq 99 N0))]
+        false []
+        [hay1
+         hay2])
+#   OK -- Elapsed: 1.144898e-02
+#   Solvable: true
+#     hay1 = [1,1,0]
+#     hay2 = [0,0,0]
+
+# Query 16 -- Type: InitialValues, Instructions: 6642
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 0 hay1))
+         (Eq false
+             (Eq 0 N0:(Read w8 0 hay2)))
+         (Eq false
+             (Eq 0 (Read w8 1 hay2)))
+         (Eq 0 (Read w8 2 hay2))
+         (Eq false (Eq 99 N0))]
+        false []
+        [hay2
+         hay1])
+#   OK -- Elapsed: 1.097399e-02
+#   Solvable: true
+#     hay2 = [1,1,0]
+#     hay1 = [0,0,0]
+
+# Query 17 -- Type: InitialValues, Instructions: 6721
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 0 hay1))
+         (Eq 0 (Read w8 1 hay2))
+         (Eq 99 (Read w8 0 hay2))]
+        false []
+        [hay2
+         hay1])
+#   OK -- Elapsed: 1.344025e-03
+#   Solvable: true
+#     hay2 = [99,0,0]
+#     hay1 = [0,0,0]
+
+# Query 18 -- Type: InitialValues, Instructions: 6949
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 0 hay1))
+         (Eq false
+             (Eq 0 N0:(Read w8 1 hay2)))
+         (Eq 0 (Read w8 2 hay2))
+         (Eq 99 (Read w8 0 hay2))
+         (Eq false (Eq 97 N0))]
+        false []
+        [hay2
+         hay1])
+#   OK -- Elapsed: 1.115501e-02
+#   Solvable: true
+#     hay2 = [99,1,0]
+#     hay1 = [0,0,0]
+
+# Query 19 -- Type: InitialValues, Instructions: 6977
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0 N0:(Read w8 1 hay1)))
+         (Eq 0 (Read w8 2 hay1))
+         (Eq 0 (Read w8 0 hay2))
+         (Eq 99 (Read w8 0 hay1))
+         (Eq false (Eq 97 N0))]
+        false []
+        [hay1
+         hay2])
+#   OK -- Elapsed: 1.054597e-02
+#   Solvable: true
+#     hay1 = [99,1,0]
+#     hay2 = [0,0,0]
+
+# Query 20 -- Type: InitialValues, Instructions: 7014
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Eq 0 N0:(Read w8 0 hay1)))
+         (Eq 0 (Read w8 1 hay1))
+         (Eq false
+             (Eq 0 (Read w8 0 hay2)))
+         (Eq 0 (Read w8 1 hay2))
+         (Eq false (Eq 99 N0))]
+        false []
+        [hay1
+         hay2])
+#   OK -- Elapsed: 1.107901e-02
+#   Solvable: true
+#     hay1 = [1,0,0]
+#     hay2 = [1,0,0]
+
+# Query 21 -- Type: InitialValues, Instructions: 7015
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 0 hay1))
+         (Eq 0 (Read w8 2 hay2))
+         (Eq 99 (Read w8 0 hay2))
+         (Eq 97 (Read w8 1 hay2))]
+        false []
+        [hay2
+         hay1])
+#   OK -- Elapsed: 1.451796e-02
+#   Solvable: true
+#     hay2 = [99,97,0]
+#     hay1 = [0,0,0]
+
+# Query 22 -- Type: InitialValues, Instructions: 7041
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 1 hay1))
+         (Eq 0 (Read w8 0 hay2))
+         (Eq 99 (Read w8 0 hay1))]
+        false []
+        [hay1
+         hay2])
+#   OK -- Elapsed: 1.415968e-03
+#   Solvable: true
+#     hay1 = [99,0,0]
+#     hay2 = [0,0,0]
+
+# Query 23 -- Type: InitialValues, Instructions: 7081
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 2 hay1))
+         (Eq 0 (Read w8 0 hay2))
+         (Eq 99 (Read w8 0 hay1))
+         (Eq 97 (Read w8 1 hay1))]
+        false []
+        [hay1
+         hay2])
+#   OK -- Elapsed: 9.509921e-04
+#   Solvable: true
+#     hay1 = [99,97,0]
+#     hay2 = [0,0,0]
+
+# Query 24 -- Type: InitialValues, Instructions: 7110
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 1 hay1))
+         (Eq false
+             (Eq 0 N0:(Read w8 0 hay2)))
+         (Eq 0 (Read w8 1 hay2))
+         (Eq 99 (Read w8 0 hay1))
+         (Eq false (Eq 97 N0))]
+        false []
+        [hay1
+         hay2])
+#   OK -- Elapsed: 1.461500e-02
+#   Solvable: true
+#     hay1 = [99,0,0]
+#     hay2 = [1,0,0]
+
+# Query 25 -- Type: InitialValues, Instructions: 7147
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 1 hay1))
+         (Eq 0 (Read w8 1 hay2))
+         (Eq 99 (Read w8 0 hay1))
+         (Eq 97 (Read w8 0 hay2))]
+        false []
+        [hay1
+         hay2])
+#   OK -- Elapsed: 2.068996e-03
+#   Solvable: true
+#     hay1 = [99,0,0]
+#     hay2 = [97,0,0]
+

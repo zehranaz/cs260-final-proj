@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/zehranaz/klee-uclibc/libc/string/strcat.c
+Line: 22
+assembly.ll line: 578
+Stack: 
+	#000000578 in strcat (s1=44206592, s2=44214400) at /home/zehranaz/klee-uclibc/libc/string/strcat.c:22
+	#100000075 in find_needle_in_haystack (hay1=44206592, hay2=44214400, needle=44206256) at /home/zehranaz/finalproj/klee_string_test.c:13
+	#200000127 in __user_main () at /home/zehranaz/finalproj/klee_string_test.c:30
+	#300000557 in __uClibc_main (main=42490032, argc=1, argv=43308576, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/zehranaz/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400001514 in main (=1, =43308576)
+Info: 
+	address: 44206595
+	next: object at 44206800 of size 4
+		MO3158[4] allocated at __user_main():  %retval = alloca i32
+	prev: object at 44206592 of size 3
+		MO3160[3] allocated at __user_main():  %hay1 = alloca [3 x i8]

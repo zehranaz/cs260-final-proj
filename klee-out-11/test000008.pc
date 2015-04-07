@@ -1,0 +1,6 @@
+array hay1[3] : w32 -> w8 = symbolic
+array hay2[3] : w32 -> w8 = symbolic
+(query [(Eq 0 (Read w8 0 hay1))
+         (Eq 0 (Read w8 1 hay2))
+         (Eq 99 (Read w8 0 hay2))]
+        false)

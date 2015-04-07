@@ -1,0 +1,19 @@
+__tmpInt8  : BITVECTOR(8);
+__tmpInt16  : BITVECTOR(16);
+__tmpInt32  : BITVECTOR(32);
+__tmpInt64  : BITVECTOR(64);
+hay1_0x2a45380  : ARRAY BITVECTOR(32) OF BITVECTOR(8);
+hay2_0x2a45400  : ARRAY BITVECTOR(32) OF BITVECTOR(8);
+%----------------------------------------------------
+ASSERT( (0x00 = hay1_0x2a45380[0x00000000]
+) );
+ASSERT( ( NOT( (0x00 = hay2_0x2a45400[0x00000001]
+))) );
+ASSERT( (0x00 = hay2_0x2a45400[0x00000002]
+) );
+ASSERT( (0x63 = hay2_0x2a45400[0x00000000]
+) );
+ASSERT( ( NOT( (0x61 = hay2_0x2a45400[0x00000001]
+))) );
+%----------------------------------------------------
+QUERY( FALSE  );
