@@ -1,0 +1,15 @@
+
+This directory demonstrates the limitations of klee with pure pointers (not arrays)
+
+
+Invocation
+-----------
+$sh run.sh <file-name>
+
+prefix-fullysymbolic, prefix-partialsymbolic fail with error messages shown below.
+
+Error Message
+------------
+
+KLEE: WARNING ONCE: Large alloc: 2880154539 bytes.  KLEE may run out of memory.
+ERROR: fork failed (for STP)
