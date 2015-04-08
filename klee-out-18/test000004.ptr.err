@@ -1,0 +1,16 @@
+Error: memory error: out of bound pointer
+File: /home/zehranaz/klee-uclibc/libc/string/strcmp.c
+Line: 34
+assembly.ll line: 609
+Stack: 
+	#000000609 in strcmp (s1=29730912, s2=29584880) at /home/zehranaz/klee-uclibc/libc/string/strcmp.c:34
+	#100000117 in branching_function (session, total) at /home/zehranaz/finalproj/test-z3.c:27
+	#200000158 in __user_main () at /home/zehranaz/finalproj/test-z3.c:42
+	#300000590 in __uClibc_main (main=27898304, argc=1, argv=28913280, app_init=0, app_fini=0, rtld_fini=0, stack_end=0) at /home/zehranaz/klee-uclibc/libc/misc/internals/__uClibc_main.c:401
+	#400001544 in main (=1, =28913280)
+Info: 
+	address: 29730913
+	next: object at 29731024 of size 4
+		MO3176[4] allocated at branching_function():  %0 = alloca i32
+	prev: object at 29730912 of size 1
+		MO3200[1] allocated at branching_function():  %8 = call noalias i8* @malloc(i64 1) nounwind, !dbg !545

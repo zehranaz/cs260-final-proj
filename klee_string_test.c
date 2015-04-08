@@ -53,5 +53,6 @@ int main() {
 	klee_assume(hay1[SIZE-1] == '\0');
 	klee_assume(hay2[SIZE-1] == '\0');
 	//klee_make_symbolic(needle, SIZE, "needle");
-	return find_needle_in_haystack(hay1, hay2, needle);
+	int is_there =  find_needle_in_haystack(hay1, hay2, needle);
+	return is_there;
 }

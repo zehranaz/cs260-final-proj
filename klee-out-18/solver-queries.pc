@@ -1,0 +1,109 @@
+# Query 0 -- Type: InitialValues, Instructions: 5250
+(query [] false)
+#   OK -- Elapsed: 1.861989e-03
+#   Solvable: true
+
+# Query 1 -- Type: InitialValues, Instructions: 5250
+array session[4] : w32 -> w8 = symbolic
+(query [] (Sle (ReadLSB w32 0 session)
+                2) []
+        [session])
+#   OK -- Elapsed: 3.987014e-03
+#   Solvable: true
+#     session = [255,255,255,127]
+
+# Query 2 -- Type: InitialValues, Instructions: 5253
+array session[4] : w32 -> w8 = symbolic
+(query [(Sle N0:(ReadLSB w32 0 session)
+              2)]
+        (Eq 0 N0) []
+        [session])
+#   OK -- Elapsed: 1.977003e-02
+#   Solvable: true
+#     session = [0,0,0,128]
+
+# Query 3 -- Type: InitialValues, Instructions: 5255
+array session[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle N0:(ReadLSB w32 0 session)
+                  2))]
+        (Eq false (Eq 9 N0)) []
+        [session])
+#   OK -- Elapsed: 1.837015e-03
+#   Solvable: true
+#     session = [9,0,0,0]
+
+# Query 4 -- Type: InitialValues, Instructions: 5267
+array total[4] : w32 -> w8 = symbolic
+(query [] (Eq false
+               (Slt 2
+                    (ReadLSB w32 0 total))) []
+        [total])
+#   OK -- Elapsed: 3.054202e-02
+#   Solvable: true
+#     total = [255,255,255,127]
+
+# Query 5 -- Type: InitialValues, Instructions: 5987
+array session[4] : w32 -> w8 = symbolic
+array total[4] : w32 -> w8 = symbolic
+(query [(Sle N0:(ReadLSB w32 0 session)
+              2)
+         (Eq false (Eq 0 N0))
+         (Slt 2
+              (ReadLSB w32 0 total))]
+        false []
+        [session
+         total])
+#   OK -- Elapsed: 2.512598e-02
+#   Solvable: true
+#     session = [0,0,0,128]
+#     total = [255,255,255,127]
+
+# Query 6 -- Type: InitialValues, Instructions: 5990
+array session[4] : w32 -> w8 = symbolic
+array total[4] : w32 -> w8 = symbolic
+(query [(Eq 9
+             (ReadLSB w32 0 session))
+         (Eq false
+             (Slt 2
+                  (ReadLSB w32 0 total)))]
+        false []
+        [session
+         total])
+#   OK -- Elapsed: 4.028022e-03
+#   Solvable: true
+#     session = [9,0,0,0]
+#     total = [0,0,0,128]
+
+# Query 7 -- Type: InitialValues, Instructions: 6198
+array session[4] : w32 -> w8 = symbolic
+array total[4] : w32 -> w8 = symbolic
+(query [(Eq false
+             (Sle N0:(ReadLSB w32 0 session)
+                  2))
+         (Eq false (Eq 9 N0))
+         (Slt 2
+              (ReadLSB w32 0 total))]
+        false []
+        [session
+         total])
+#   OK -- Elapsed: 1.167601e-02
+#   Solvable: true
+#     session = [0,0,0,1]
+#     total = [255,255,255,127]
+
+# Query 8 -- Type: InitialValues, Instructions: 6220
+array session[4] : w32 -> w8 = symbolic
+array total[4] : w32 -> w8 = symbolic
+(query [(Eq 9
+             (ReadLSB w32 0 session))
+         (Slt 2
+              (ReadLSB w32 0 total))]
+        false []
+        [session
+         total])
+#   OK -- Elapsed: 1.127005e-03
+#   Solvable: true
+#     session = [9,0,0,0]
+#     total = [255,255,255,127]
+

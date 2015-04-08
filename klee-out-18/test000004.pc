@@ -1,0 +1,8 @@
+array session[4] : w32 -> w8 = symbolic
+array total[4] : w32 -> w8 = symbolic
+(query [(Sle N0:(ReadLSB w32 0 session)
+              2)
+         (Eq false (Eq 0 N0))
+         (Slt 2
+              (ReadLSB w32 0 total))]
+        false)

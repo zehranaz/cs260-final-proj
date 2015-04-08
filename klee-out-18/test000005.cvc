@@ -1,0 +1,22 @@
+__tmpInt8  : BITVECTOR(8);
+__tmpInt16  : BITVECTOR(16);
+__tmpInt32  : BITVECTOR(32);
+__tmpInt64  : BITVECTOR(64);
+session_0x1c46470  : ARRAY BITVECTOR(32) OF BITVECTOR(8);
+total_0x1c464f0  : ARRAY BITVECTOR(32) OF BITVECTOR(8);
+%----------------------------------------------------
+ASSERT( ((((0x09 = session_0x1c46470[0x00000000]
+) AND (0x00 = session_0x1c46470[0x00000001]
+)
+) AND (0x00 = session_0x1c46470[0x00000002]
+)
+) AND (0x00 = session_0x1c46470[0x00000003]
+)
+) );
+ASSERT( ( NOT( SBVGT((total_0x1c464f0[0x00000003] @ (total_0x1c464f0[0x00000002] @ (total_0x1c464f0[0x00000001] @ total_0x1c464f0[0x00000000]
+)
+)
+),0x00000002)
+)) );
+%----------------------------------------------------
+QUERY( FALSE  );

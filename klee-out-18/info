@@ -1,0 +1,21 @@
+klee -libc=uclibc -write-cvcs -write-paths -write-pcs --use-query-log=solver:pc test-z3.o
+PID: 80153
+Started: 2015-04-07 23:02:01
+BEGIN searcher description
+<InterleavedSearcher> containing 2 searchers:
+RandomPathSearcher
+WeightedRandomSearcher::CoveringNew
+</InterleavedSearcher>
+END searcher description
+Finished: 2015-04-07 23:02:02
+Elapsed: 00:00:01
+KLEE: done: explored paths = 8
+KLEE: done: avg. constructs per query = 56
+KLEE: done: total queries = 9
+KLEE: done: valid queries = 0
+KLEE: done: invalid queries = 9
+KLEE: done: query cex = 9
+
+KLEE: done: total instructions = 6220
+KLEE: done: completed paths = 8
+KLEE: done: generated tests = 8
