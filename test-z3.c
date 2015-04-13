@@ -3,10 +3,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int branching_function(int session, int total) {
+int branching_function(int session) {
 	
 	char *role;
-	if (session < 3) {
+	if (session < 3 && session >= 0) {
 		if (session == 0)
 			role = "visitor";
 		
@@ -21,10 +21,11 @@ int branching_function(int session, int total) {
 			role = "1";
 	}
 
+	int total = session + 1;
 	if (total > 2) {
-		char* substr = malloc(sizeof(char));
-		strncpy(substr, role, 1);
-		if (strcmp(substr, "n") == 0) {
+		char* substr = malloc(sizeof(char)*2);
+		strncpy(substr, role+1, 1);
+		if (strcmp(substr, "e") == 0) {
 			return 1;
 		}
 		else
@@ -36,10 +37,10 @@ int branching_function(int session, int total) {
 }
 
 int main () {
-	int session, total;
+	int session;
 	klee_make_symbolic(&session, sizeof(int), "session");
-	klee_make_symbolic(&total, sizeof(int), "total");
-	int ret = branching_function(session, total);
+	//klee_make_symbolic(&total, sizeof(int), "total");
+	int ret = branching_function(session);
 	return ret;
 }
 
